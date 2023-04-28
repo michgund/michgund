@@ -1,0 +1,228 @@
+body {
+  /* background: #f0f2f0;
+  background: -webkit-linear-gradient(to right, #000c40, #f0f2f0); 
+  background: linear-gradient(to right, #000c40, #f0f2f0);  */
+  background-color: cornflowerblue;
+  font-family: "Luckiest Guy";
+  /* text-shadow: 2px 2px 2px black; */
+  font-weight: bold;
+  /* width: 100%;
+  height: 90vh; */
+  display: flex;
+  flex-direction: column;
+  /* justify-content: center; */
+  align-items: center;
+  padding: 2vh;
+  /* overflow: hidden; */
+  position: relative;
+}
+
+#container {
+  width: 100vw;
+  height: 55vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: cornflowerblue;
+  /* padding-top: 1vh; */
+}
+
+#content {
+  width: 80vw;
+  margin-top: 6vh;
+  background-color: gray;
+  background-size: 25%;
+  border-radius: 5px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.2em;
+}
+
+#center {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+#content h1 {
+  /* width: 40vh; */
+  text-align: center;
+  font-size: 2em;
+}
+
+h2,
+h3,
+h4 {
+  margin-top: 0;
+  margin-bottom: 0vh;
+  font-size: 1.5em;
+}
+
+#content img {
+  width: 25vh;
+  margin-top: -6vh;
+  margin-bottom: -6vh;
+}
+
+#future img {
+  width: 10vh;
+  margin: -1vh auto;
+}
+
+#content h3 {
+  font-size: 3em;
+}
+
+button {
+  background-color: blue;
+  color: coral;
+  font-weight: bold;
+  font-size: 1.2em;
+}
+
+input,
+button {
+  border-radius: 5px;
+  border: none;
+  height: 4vh;
+}
+
+input {
+  /* background: rgb(228, 238, 237);
+  background: linear-gradient(90deg, rgba(228, 238, 237, 1) 0%, rgba(7, 54, 129, 1) 100%); */
+  text-align: center;
+  font-size: 2.1em;
+}
+
+#main {
+  margin-top: 10vh;
+}
+
+#search {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  padding-bottom: 2vh;
+  position: absolute;
+  z-index: 10;
+  left: 50%;
+  transform: translate(-50%);
+}
+
+p {
+  font-size: 1.5em;
+}
+
+body > h1 {
+  text-align: center;
+  color: white;
+  font-size: 5em;
+  margin: -2vh 0 -10vh 0;
+}
+#middle {
+  display: flex;
+}
+
+#left,
+#right {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-content: center;
+  gap: 3em;
+  flex-wrap: wrap;
+  /* width: 50vh; */
+  height: 100%;
+}
+
+#future {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  /* gap: 2em; */
+  width: 80vw;
+}
+
+.another {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  color: coral;
+  /* background-color: rgba(7,54,129,0.1); */
+  background-color: gray;
+  background-size: 35%;
+  border-radius: 5px;
+  width: 25vh;
+  height: 25vh;
+  margin-top: 3vh;
+}
+
+/* .another:nth-of-type(1),
+.another:nth-of-type(4) {
+  margin-top: -3vh;
+} */
+
+.another img {
+  width: 30%;
+  margin: 0px 9vh;
+}
+
+.another p {
+  margin: 0;
+}
+.another p:first-of-type {
+  margin-top: 3vh;
+}
+
+@media screen and (max-width: 900px) {
+  #future {
+    flex-direction: column;
+    gap: 1em;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  #middle {
+    flex-direction: column;
+  }
+  #left,
+  #right {
+    gap: 0;
+  }
+  #left {
+    margin-bottom: 2vh;
+  }
+  #right {
+    margin-top: 2vh;
+  }
+}
+
+input,
+#results {
+  width: 30vh;
+}
+
+#results > p {
+  background-color: rgba(200, 200, 200, 0.6);
+  cursor: pointer;
+  margin: 0;
+}
+
+#results > p:hover,
+.active {
+  background-color: rgba(200, 200, 200, 1);
+}
+
+.notactive {
+  background-color: rgba(200, 200, 200, 0.6);
+}
+
+.active {
+  background-color: rgba(200, 200, 200, 1);
+}

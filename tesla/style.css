@@ -1,0 +1,280 @@
+@font-face {
+    font-family: GothamSSm;
+    src: url(./fonts/GothamSSm-Book_Web.woff2);
+}
+
+@font-face {
+    font-family: GothamSSmm;
+    src: url(./fonts/GothamSSm-Medium_Web.woff2);
+}
+
+/* * {
+    outline: 1px solid red;
+  } */
+
+html {
+    scroll-behavior:smooth;
+    scroll-snap-type:y mandatory;
+}
+
+body {
+    margin: 0;
+    height: 100%;
+    font-family: GothamSSm;
+    font-size: 14px;
+    font-weight: 600;
+    position: relative;
+    z-index: -2;
+}
+
+a {
+    color: black;
+}
+
+article {
+    position: relative;
+    z-index: -3;
+    height: 100%;
+}
+
+header {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    background-color: white;
+    font-weight: 100;
+    top: 0;
+    padding-bottom: 7px;
+}
+
+header > a {
+    margin-left: 5px;
+}
+
+nav > svg {
+    width: 12vh;
+    margin-right: 12vh;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    top: 70px;
+    left: 45px;
+    width: 95%;
+    animation: fade-in 1s 1;
+    /* padding-top: 1.5vh; */
+}
+
+@keyframes fade-in {
+    0%{
+        opacity: 0%;
+    }
+    100%{
+        opacity: 100%;
+    }
+}
+
+nav a {
+    margin: 1em;
+    text-decoration: none;
+}
+
+section {
+    display: flex;
+    justify-content: center;
+    scroll-snap-align: center;
+    position: relative;
+    z-index: -1;
+    /* margin-top: 5vh; */
+    /* padding-top: 5vh; */
+    height: 100vh;
+    width: 100%;
+    background-size: cover;
+}
+
+#down-arrow,
+#down-arrow1,
+#down-arrow2,
+#down-arrow3,
+#down-arrow4,
+#down-arrow5 {
+    position: absolute;
+    border: none;
+    font-size: 1.5em;
+    top: 925px;
+    opacity: 1;
+    animation: jump 2s 2s linear infinite;
+}
+
+@keyframes jump {
+    20%{
+        transform: translateY(.75vh);
+    }
+    35%{
+        transform: translateY(-.25vh);
+    }
+    50%{
+        transform: translateY(.12vh);
+    }
+    60%{
+        transform: translateY(-.12vh);
+    }
+    70%{
+        transform: translateY(0vh);
+    }
+}
+
+.model-y {
+    background-image: url(./images/Desktop-ModelY.jpeg);
+    background-position-y: -13rem;
+}
+
+.model-3 {
+    background-image: url(./images/M3-Homepage-Desktop-LHD.jpeg);
+    background-position-y: -2rem;
+}
+
+.model-s {
+    background-image: url(./images/Homepage-Model-S-Desktop-LHD.jpeg);
+    background-position-y: -2rem;
+}
+
+.model-x {
+    background-image: url(./images/Homepage-Model-X-Desktop-LHD.jpeg);
+    background-position-y: -2rem;
+}
+
+.solar-panels {
+    background-image: url(./images/_25-HP-SolarPanels-D.jpeg);
+    background-position-y: -2rem;
+}
+
+.solar-roof {
+    background-image: url(./images/Homepage-SolarRoof-Desktop-Global.webp);
+    background-position-y: -2rem;
+}
+
+.accessories {
+    background-image: url(./images/dd739764-bcaa-4263-9488-8c73bc9fb046.jpeg);
+    background-position-y: -13rem;
+}
+
+h1 {
+    position: absolute;
+    font-size: 39px;
+    top: 140px;
+    opacity: 0%;
+    animation: fade-up 1s 1s 1;
+    animation-fill-mode: forwards;
+}
+
+@keyframes fade-up {
+    0%{
+        opacity: 0%;
+        top: 180px;
+    }
+    100%{
+        opacity: 100%;
+    }
+    
+}
+
+section a {
+    position: absolute;
+    top: 230px;
+    font-weight: 100;
+    text-decoration: none;
+    border-bottom: 1px solid black;
+    opacity: 0%;
+    animation: bottom-fade-up 1s 1.5s 1;
+    animation-fill-mode: forwards;
+}
+
+@keyframes bottom-fade-up {
+    0%{
+        opacity: 0%;
+        top: 260px;
+    }
+    100%{
+        opacity: 100%;
+    }
+}
+
+button {
+    position: absolute;
+    top: 825px;
+    height: 40px;
+    width: 265px;
+    border-radius: 5px;
+    font-family: GothamSSmm;
+    border-style: none;
+    font-size: 14px;
+}
+
+.order-button {
+    left: 556px;
+    background-color: rgb(34, 34, 34);
+    color: rgb(232, 232, 232);
+    opacity: 0%;
+    animation: fade-left 1s 1.5s 1;
+    animation-fill-mode: forwards;
+}
+
+@keyframes fade-left {
+    0%{
+        opacity: 0%;
+        left: 500px;
+    }
+    100%{
+        opacity: 100%;
+    }
+}
+
+.inventory-button {
+    left: 844px;
+    background-color: rgb(232, 232, 232);
+    color: rgb(34, 34, 34);
+    opacity: 0%;
+    animation: fade-right 1s 1.5s 1;
+    animation-fill-mode: forwards;
+}
+
+@keyframes fade-right {
+    0%{
+        opacity: 0%;
+        left: 900px;
+    }
+    100%{
+        opacity: 100%;
+    }
+}
+
+#accessories-button {
+    top: 801px;
+    left: 700px;
+}
+
+.footer {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    position: relative;
+    top: -42px;
+}
+
+.footer-links {
+    display: flex;
+    justify-content: space-between;
+    width: 37%;
+}
+
+.footer-links a {
+    text-decoration: none;
+    font-size: 12.5px;
+    color: rgb(99, 99, 99);
+}

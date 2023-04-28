@@ -1,0 +1,357 @@
+html {
+    animation: cant-scroll 18.2s ease 0s forwards;
+}
+
+@keyframes cant-scroll {
+    0%{
+        overflow: hidden;
+    }
+    99%{
+        overflow: hidden;
+    }
+    100%{
+        overflow: auto;
+    }
+}
+
+/****************************/
+/***** ANIMATIONS INTRO *****/
+/****************************/
+
+#animation-container {
+    height: 100vh;
+    width: 100%;
+    background-color: whitesmoke;
+    position: absolute;
+    z-index: 5;
+    overflow: hidden;
+    animation: fadeout 1s ease 17.05s forwards;
+    scroll-snap-align: center;
+}
+
+@keyframes fadeout {
+    100% {
+        visibility: hidden;
+    }
+}
+
+.roll {
+    font-family: PoppinsB;
+    opacity: 0;
+    font-size: 5em;
+    color: #073681;
+    display: flex;
+}
+
+.in {
+    opacity: 0;
+    animation: appear 1s ease 4s forwards, appear .5s reverse 8s forwards;
+}
+
+@keyframes appear {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+#animation-container > div:nth-of-type(1) {
+animation: s-one-in 1s ease 0s 1 normal forwards;
+}
+
+@keyframes s-one-in {
+    0% {
+        transform: translateX(-200px) translateY(250px);
+	}
+
+	100% {
+		opacity: 1;
+		transform: translateX(645px) translateY(250px);
+	}
+}
+
+#animation-container > div:nth-of-type(2) {
+    animation: p-one-in 1s ease 1s 1 normal forwards;
+}
+
+@keyframes p-one-in {
+	0% {
+		transform: translateX(-200px) translateY(250px);
+	}
+
+	100% {
+		opacity: 1;
+		transform: translateX(725px) translateY(250px);
+	}
+}
+
+ #animation-container > div:nth-of-type(3) {
+    animation: p-two-in 1s ease 2s 1 normal forwards;
+}
+
+@keyframes p-two-in {
+	0% {
+		transform: translateX(-200px) translateY(250px);
+	}
+
+	100% {
+		opacity: 1;
+		transform: translateX(815px) translateY(250px);
+	}
+}
+
+#animation-container > div:nth-of-type(4) {
+    animation: s-two-in 1s ease 3s 1 normal forwards;
+}
+
+@keyframes s-two-in {
+	0% {
+		transform: translateX(-200px) translateY(250px);
+	}
+
+	100% {
+		opacity: 1;
+		transform: translateX(900px) translateY(250px);
+	}
+}
+
+.lines {
+    position: absolute;
+    display: flex;
+    bottom: 0;
+    left: 42%;
+    height: 9vh;
+    background-color: whitesmoke;
+    text-align: center;
+    animation: transp 1s ease 8s forwards;
+}
+
+@keyframes transp {
+    100%{
+        background-color: transparent;
+    }
+}
+
+.lines > div {
+    display: inline-block;
+    height: 3px;
+    width: 64px;
+    background-color: var(--school-color);
+    margin: 0px 14px 0px 10px;
+    opacity: 0;
+}
+
+
+#animation-container .out-one {
+    animation: s-one-down 1s ease 5s forwards;
+}
+
+#mo {
+    animation: appear 1s ease 4s forwards;
+}
+
+@keyframes s-one-down {
+    90% {
+        transform: translateY(220px);
+    }
+    100% {
+        transform: translateY(220px);
+        visibility: hidden;
+    }
+}
+
+#animation-container .out-two {
+    animation: p-one-down 1s ease 6s forwards;
+}
+
+@keyframes p-one-down {
+    90% {
+        transform: translateY(340px);
+    }
+    100% {
+        transform: translateY(340px);
+        visibility: hidden;
+    }
+}
+
+#animation-container .out-three {
+    animation: p-two-down 1s ease 7s forwards;
+}
+
+@keyframes p-two-down {
+    90% {
+        transform: translateY(460px);
+    }
+    100% {
+        transform: translateY(460px);
+        visibility: hidden;
+    }
+}
+
+#animation-container .lines > div:nth-of-type(3) {
+    animation: appear .5s ease 5.5s forwards;
+}
+
+#animation-container .lines > div:nth-of-type(2) {
+    animation: appear .5s ease 6.5s forwards;
+}
+
+#animation-container .lines > div:nth-of-type(1) {
+    animation: appear .5s ease 7.5s forwards;
+}
+
+#up {
+    opacity: 1;
+    z-index: 4;
+    animation: 
+        appear .5s reverse 8s forwards, 
+        move-up 2s linear 9s forwards,
+        change-colour 2.5s linear 16s forwards;
+}
+
+@keyframes change-colour {
+    100% {
+        position: absolute;
+        z-index: 4;
+        transform: translateX(-645px) translateY(-280px);
+        width: 100px;
+        opacity: 1;
+        height: 1000px;
+        background-color: rgba(245, 245, 245, 1);
+        color: transparent;
+        }
+}
+
+@keyframes move-up {
+    0% {
+        opacity: 0;
+        position: absolute;
+        z-index: 4;
+        transform: translateX(0px) translateY(0px);
+        width: 100px;
+    }
+    10% {
+        position: absolute;
+        z-index: 4;
+        transform: translateX(-645px) translateY(700px);
+        width: 100px;
+        opacity: 0;
+    }
+    11% {
+        position: absolute;
+        z-index: 4;
+        transform: translateX(-645px) translateY(700px);
+        width: 100px;
+        opacity: 1;
+        background-color: #073681;
+        height: 1000px;
+        color: transparent;
+    }
+    100% {
+        position: absolute;
+        z-index: 4;
+        transform: translateX(-645px) translateY(-280px);
+        width: 100px;
+        opacity: 1;
+        height: 1000px;
+        background-color: var(--school-color);
+        color: transparent;
+    }
+}
+
+#left {
+    animation: 
+        appear 1s ease 4s forwards, 
+        appear .5s reverse 8s forwards, 
+        move-left 5s linear 11s forwards;
+}
+
+@keyframes move-left {
+    0% {
+        position: absolute;
+        z-index: 3;
+        transform: translateX(1100px) translateY(-250px);
+        opacity: 0;
+    }
+    1% {
+        position: absolute;
+        z-index: 3;
+        transform: translateX(1100px) translateY(-250px);
+        opacity: 1;
+        width: 1600px;
+        height: 1000px;
+        background-color: #073681;
+    }
+    100% {
+        position: absolute;
+        z-index: 3;
+        transform: translateX(-545px) translateY(-250px);
+        opacity: 1;
+        width: 1600px;
+        height: 1000px;
+        background-color: #073681;
+    }
+}
+
+#dot {
+    background-color: #073681;
+    border-radius: 50%;
+    position: absolute;
+    top: 73px;
+    left: 86.5px;
+    width: 16px;
+    height: 16px;
+    animation: 
+        appear 1s ease 4s forwards, 
+        appear .5s reverse 8s forwards,
+        grow 3.85s linear 9s forwards,
+        spin 1s linear 14.02s 4,
+        go 2.1s linear 14.02s forwards;
+}
+
+@keyframes grow {
+    0% {
+        background-color: transparent;
+        opacity: 0;
+    }
+    40% {
+        scale: 3.25;
+        opacity: 1;
+        background-color: #073681;
+    }
+    99% {
+        scale: 3.25;
+        opacity: 1;
+        background-color: #073681;
+    }
+    100% {
+        scale: 3.25;
+        opacity: 1;
+        transform: translateX(0) translateY(0);
+        background-image: url(./logo.png);
+        background-repeat: no-repeat;
+        background-size: contain;
+    }
+}
+
+@keyframes spin {
+    100% {
+        rotate: -360deg;
+    }
+}
+
+@keyframes go {
+    98% {
+        z-index: 4;
+        top: 211px;
+        left: -604px;
+    }
+    100% {
+        z-index: 4;
+        top: 211px;
+        left: -604px;
+    }
+}
