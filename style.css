@@ -85,6 +85,8 @@ nav a:hover {
 
 .card h2 {
   margin-top: 0;
+  height: 5vh;
+  padding-top: 1vh;
 }
 
 .card p {
