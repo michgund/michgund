@@ -113,7 +113,12 @@ nav a:hover {
 
 .links {
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
+  gap: 1em;
+}
+
+.links > a {
+  width: 100%;
 }
 
 .card ul {
