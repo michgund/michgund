@@ -183,3 +183,10 @@ li,
 .flip-card-back {
   transform: rotateY(180deg);
 }
+
+.flip-card-back ul {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 80%;
+}
