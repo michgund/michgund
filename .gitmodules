@@ -1,3 +1,7 @@
 [submodule "odin-to-do-list"]
 	path = odin-to-do-list
 	url = https://github.com/michgund/odin-to-do-list
+
+[submodule "new-weather-app"]
+	path = new-weather-app
+	url = https://github.com/michgund/new-weather-app
